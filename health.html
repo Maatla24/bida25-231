@@ -1,228 +1,293 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEALTH</title>
+    <title>267News | Health</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-/* 1. The Background Gradient */
-body {
-   margin: 0;
-   padding: 0;
-   font-family: 'Arial', sans-serif;
-   /* This creates the gray-to-white fade effect */
-   background: linear-gradient(to bottom, #7a7a7a 0%, #f4f4f4 50%, #ffffff 100%);
-   min-height: 100vh;
-}
-/* 2. Header Layout (Logo on left, Nav on right) */
-header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 20px 50px;
-}
-.logo img {
-   height: 60px; /* Adjust based on your 267News logo size */
-}
-nav a {
-   text-decoration: none;
-   color: #333;
-   margin-left: 15px;
-   font-size: 14px;
-}
-/* 3. Hero Section (The "Best News" text) */
-main {
-   text-align: center;
-   padding-top: 100px;
-}
-h1 {
-   font-size: 3.5rem;
-   color: #1a1a1a;
-   margin-bottom: 10px;
-   font-weight: bold;
-}
-p.tagline {
-   color: #666;
-   text-transform: uppercase;
-   letter-spacing: 2px;
-   font-size: 0.9rem;
-}
-/* 4. The Image below the text */
-.hero-image {
-   max-width: 800px;
-   margin: 40px auto;
-   border: 5px solid white; /* Gives it that clean framed look */
-   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
-}
-.hero-image img {
-   width: 100%;
-   display: block;
-}
-    </style>
     
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #7a7a7a 0%, #f4f4f4 50%, #ffffff 100%);
+            min-height: 100vh;
+            padding-bottom: 120px; 
+        }
+
+      
+        .navbar {
+            background: rgb(254, 172, 188);
+            font-family: 'Gill Sans', sans-serif;
+            padding: 10px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+      /* --- THE EXACT STYLE + RESPONSIVE RULES --- */
+.navbar {
+    background-color: #0d1a1a !important; 
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-link {
+    color: white !important;
+    font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.signup-btn {
+    background-color: white;
+    color: black !important;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Impact', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #0d1a1a;
+        padding: 20px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+    }
+    
+    .nav-link {
+        margin: 15px 0;
+        font-size: 24px;
+    }
+
+    .signup-btn {
+        margin-top: 10px;
+        width: 100%; 
+    }
+}
+      
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        article {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        article h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        article img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .meta-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .article-content p {
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        ul.highlights {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul.highlights li {
+            display: list-item;
+            list-style: disc;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #222;
+            color: white;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section p { color: #feacbc; margin-bottom: 2px; font-size: 0.9rem; font-weight: bold;}
+        .footer-section a { color: white; text-decoration: none; font-size: 0.8rem; margin: 0 10px; }
+        .footer-section a:hover { color: #feacbc; }
+
+    </style>
 </head>
-
 <body>
-    <div class="header">
-    <div class="container">
-        <div class="navbar">
-        <div class="logo">
-            <img src="Copilot_20260309_171812.png" width="125px">
+
+   <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand logo" href="index.html">
+            <img src="logo of 267.png" alt="267News Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="current affairs.html">Current Affairs</a></li>
+                <li class="nav-item"><a class="nav-link" href="health.html">Health</a></li>
+                <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                <li class="nav-item">
+                    <a href="form.html" class="signup-btn">SIGN UP</a>
+                </li>
+            </ul>
         </div>
-    <header>
-        <h1>NEWS</h1>
-        <nav>
-            <a href="index.html">home</a> |
-            <a href="news.html">news</a> |
-            <a href="sports.html">sports</a>
-            <a href="health.html">health</a>
-            <a href="form.html">form</a>
-            <a href="table.html">table</a>
+    </div>
+</nav>
 
-        </nav>
-    </header>
     <main>
-        <section class="National-Health">
-            <h2>Natonal Health</h2>
+        <h1>Health News</h1>
 
-            <article>
-                <img src="images.jfif" alt="News Image Description">
-                <h3>Health: The high HIV </h3>
-                <p><strong>published:</strong>MARCH 9 2026</p>
-                <p>The number of HIV positive citizens in botswana continue increase by 20% in the year of 2025. <br> Government encourages people to test them selves when with their partner to reduce the spread of the virus</p>
-                
+        
+        <article>
+            <h3>Nationwide Polio Campaign Targets 300,000 Children</h3>
+            <img src="istockphoto-114151388-612x612.jpg" alt="Child vaccination">
+            <div class="meta-info">
+                <p><strong>Published:</strong> April 18, 2026 | <strong>Reporter:</strong> Leatile Mogende</p>
+            </div>
+            <div class="article-content">
+                <p>GABORONE — The Ministry of Local Government and Traditional Affairs, in collaboration with the Ministry of Health, has launched a massive nationwide polio vaccination campaign. The initiative is a proactive response to vaccine-derived poliovirus type 2 (nVOP2) cases detected in environmental samples across neighboring countries.</p>
+                <ul class="highlights">
+                    <li><strong>The Rollout:</strong> Round 1 (May 5-8), Round 2 (June 8-11).</li>
+                    <li><strong>Strategy:</strong> Mixed-model approach including schools, clinics, and door-to-door visits.</li>
+                    <li><strong>Security:</strong> Verify official Ministry name tags on all health workers.</li>
+                </ul>
+            </div>
+        </article>
 
-            </article>
+    
+        <article>
+            <h3>Drug Availability Stabilizes at 64% After Military Intervention</h3>
+            <img src="medicine-supply.jpg" alt="Medical supplies">
+            <div class="meta-info">
+                <p><strong>Published:</strong> April 22, 2026 | <strong>Reporter:</strong> Maatla Francis</p>
+            </div>
+            <div class="article-content">
+                <p>The national medical supply chain is recovering from a 17% low in 2025. With BDF logistical oversight, availability has reached 64%.</p>
+                <ul class="highlights">
+                    <li><strong>Supplies:</strong> 12-month ARV buffer secured (73% availability).</li>
+                    <li><strong>Aid:</strong> 338 products arrived from the UAE.</li>
+                    <li><strong>Future:</strong> Talks with Indian manufacturers for local generic production.</li>
+                </ul>
+            </div>
+        </article>
 
-            <hr>
+        <article>
+            <h3>Sir Ketumile Masire Hospital Becomes Public Referral Hub</h3>
+            <div class="meta-info">
+                <p><strong>Published:</strong> April 20, 2026 | <strong>Reporter:</strong> Maatla Francis</p>
+            </div>
+            <div class="article-content">
+                <p>SKMTH has transitioned to a public referral center to decongest Princess Marina Hospital, doubling orthopedic surgical capacity.</p>
+            </div>
+        </article>
+         <article>
+            <h3>Botswana's "Health Reset" - Can the New Strategy Save Princess Marina?</h3>
+            <img src="racr.jfif" alt="Botswana relay team winning">
+            <div class="meta-data">
+                <p><strong>Published:</strong> MARCH 9, 2026</p>
+                <p><strong>By:</strong> Maatla Francis</p>
+            </div>
+            <p>GABORONE — As of May 2026, Botswana finds itself at a critical crossroads. The nation is currently navigating a high-stakes "Public Health Reset" led by the administration of President Duma Boko. With the legendary Princess Marina Hospital (PMH) struggling under the weight of decades-old congestion and a fragile economy recovering from a 2024 contraction, the government is betting big on structural reform to restore public trust.
+The Great Decongestion: Turning SKMTH Public
+For years, Princess Marina Hospital has been the face of Botswana's healthcare crisis—defined by overflowing wards, surgical backlogs, and pharmacy queues that stretch into the parking lots. In a bold move that has sparked intense nationwide debate, the government officially completed the transition of the Sir Ketumile Masire Teaching Hospital (SKMTH) into a fully public facility this April.  </p>
+        </article>
 
-            <article>
-                <img src="retired-woman-with-oxygen-tube-against-respiratory-problem-hospital-ward-bed-sick-patient-breathing-heavily-while-resting-waiting-medical-assistance-with-iv-drip-ba.avif" alt="News image description ">
-                <h3>Old virus: CORONA VIRUS STILL PRESENT</h3>
-                <p><Strong>Published:</Strong> March 8 2026</p>
-                <p>Some Elderly still being affected by the corona virus in 2026 as they have to go for regular check-ups at the hospital regardless of them having received the Vaccination to help control the virus<br>Government wants to order new Johnson Johnson vaccination from china </p>
-            </article>
-        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 267News. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEALTH</title>
-    <style>
-/* 1. The Background Gradient */
-body {
-   margin: 0;
-   padding: 0;
-   font-family: 'Arial', sans-serif;
-   /* This creates the gray-to-white fade effect */
-   background: linear-gradient(to bottom, #7a7a7a 0%, #f4f4f4 50%, #ffffff 100%);
-   min-height: 100vh;
-}
-/* 2. Header Layout (Logo on left, Nav on right) */
-header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 20px 50px;
-}
-.logo img {
-   height: 60px; /* Adjust based on your 267News logo size */
-}
-nav a {
-   text-decoration: none;
-   color: #333;
-   margin-left: 15px;
-   font-size: 14px;
-}
-/* 3. Hero Section (The "Best News" text) */
-main {
-   text-align: center;
-   padding-top: 100px;
-}
-h1 {
-   font-size: 3.5rem;
-   color: #1a1a1a;
-   margin-bottom: 10px;
-   font-weight: bold;
-}
-p.tagline {
-   color: #666;
-   text-transform: uppercase;
-   letter-spacing: 2px;
-   font-size: 0.9rem;
-}
-/* 4. The Image below the text */
-.hero-image {
-   max-width: 800px;
-   margin: 40px auto;
-   border: 5px solid white; /* Gives it that clean framed look */
-   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
-}
-.hero-image img {
-   width: 100%;
-   display: block;
-}
-    </style>
-    
-</head>
-
-<body>
-    <div class="header">
-    <div class="container">
-        <div class="navbar">
-        <div class="logo">
-            <img src="images/Copilot_20260309_171812.png" width="125px">
+    <footer class="sticky-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>CONTACT US</p>
+                <a href="mailto:267NEWS@gmail.com">267NEWS@gmail.com</a>
+                <a href="tel:+26771234567">📞 +267 71 234 567</a>
+            </div>
+            <div class="footer-section">
+                <p>SOCIAL MEDIA</p>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">X</a>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2026 267NEWS Botswana</p>
+            </div>
         </div>
-    <header>
-        <h1>NEWS</h1>
-        <nav>
-            <a href="index.html">home</a> |
-            <a href="news.html">news</a> |
-            <a href="sports.html">sports</a>
-            <a href="health.html">health</a>
-            <a href="form.html">form</a>
-
-        </nav>
-    </header>
-    <main>
-        <section class="National-Health">
-            <h2>Natonal Health</h2>
-
-            <article>
-                <img src="images/images.jfif" alt="News Image Description">
-                <h3>Health: The high HIV </h3>
-                <p><strong>published:</strong>MARCH 9 2026</p>
-                <p>The number of HIV positive citizens in botswana continue increase by 20% in the year of 2025. <br> Government encourages people to test them selves when with their partner to reduce the spread of the virus</p>
-                
-
-            </article>
-
-            <hr>
-
-            <article>
-                <img src="images/retired-woman-with-oxygen-tube-against-respiratory-problem-hospital-ward-bed-sick-patient-breathing-heavily-while-resting-waiting-medical-assistance-with-iv-drip-ba.avif" alt="News image description ">
-                <h3>Old virus: CORONA VIRUS STILL PRESENT</h3>
-                <p><Strong>Published:</Strong> March 8 2026</p>
-                <p>Some Elderly still being affected by the corona virus in 2026 as they have to go for regular check-ups at the hospital regardless of them having received the Vaccination to help control the virus<br>Government wants to order new Johnson Johnson vaccination from china </p>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 267News. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
->>>>>>> 3cff3a4a86c644359c7e6caab61601fa48b3006b
