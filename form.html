@@ -3,169 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>267News | Register</title>
+    <title>267News | Join the Conversation</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; padding: 0; box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
 
         body {
             min-height: 100vh;
-            /* Ensure the background image path is correct */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('1338883-gaborone.webp');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1338883-gaborone.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
+            color: white;
         }
 
-        /* --- NAVBAR REFINEMENTS --- */
         .navbar {
-            background-color: #0d1a1a !important; 
+            background-color: #0d1a1a; 
             padding: 10px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .logo img {
-            height: 40px;
-        }
+        .logo img { height: 60px; transition: 0.3s; }
+        .logo img:hover { transform: scale(1.05); }
 
         .nav-link {
-            color: white !important;
-            /* Matching the 'Impact' style from your home page */
-            font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
-            font-size: 22px;
-            margin-right: 20px;
-            transition: 0.3s;
-        }
-
-        .signup-btn {
-            background-color: white;
-            color: black !important;
-            padding: 8px 20px;
-            border-radius: 8px;
-            text-decoration: none;
+            color: white ;
             font-family: 'Impact', sans-serif;
             font-size: 20px;
-            text-transform: uppercase;
-            display: inline-block;
-            border: none;
-            transition: 0.3s;
+            margin-right: 20px;
         }
-
-        .signup-btn:hover {
-            background-color: #cccccc;
-        }
-
-    
-        @media (max-width: 991px) {
-            .navbar-collapse {
-                background-color: #0d1a1a;
-                padding: 20px;
-                text-align: center;
-                border-radius: 0 0 15px 15px;
-            }
-            
-            .nav-link {
-                margin: 10px 0;
-                font-size: 24px;
-                display: block;
-            }
-
-            .signup-btn {
-                margin-top: 15px;
-                width: 100%; 
-            }
-        }
-
-        .form-container {
-            flex-grow: 1;
+        .main-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
-        .form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        .glass-card {
+            background: rgba(20, 35, 35, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 40px;
             width: 100%;
-            max-width: 400px;
-            background: rgba(36, 50, 50, 0.95); 
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 450px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            transition: 0.5s ease;
         }
 
         .title {
-            font-size: 28px;
             color: #1ab188;
+            font-size: 32px;
             font-weight: 600;
-            text-align: center;
-        }
-
-        .message {
-            color: #ccc;
-            font-size: 14px;
             text-align: center;
             margin-bottom: 10px;
         }
 
-        .form-group {
-            display: flex;
-            gap: 10px;
-        }
+        .message { color: #aaa; text-align: center; font-size: 14px; margin-bottom: 25px; }
 
-        .form label {
+        .input-group-custom {
             position: relative;
-            width: 100%;
+            margin-bottom: 20px;
         }
 
-        .form label input {
+        .input-group-custom input {
             width: 100%;
-            padding: 18px 10px 6px 10px; 
-            outline: none;
+            padding: 15px 10px;
+            background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.2);
-            background: #1d2929;
+            border-radius: 12px;
             color: white;
-            border-radius: 10px;
-            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
         }
 
-        .form label span {
-            position: absolute;
-            left: 10px;
-            top: 14px;
-            color: #888;
-            font-size: 0.9em;
-            transition: 0.3s ease;
-            pointer-events: none;
+        .input-group-custom input:focus {
+            border-color: #1ab188;
+            background: rgba(26, 177, 136, 0.05);
         }
 
-        
-        .form label input:focus ~ span,
-        .form label input:valid ~ span {
-            top: 2px;
-            left: 10px;
-            font-size: 0.7em;
-            font-weight: 600;
-            color: #1ab188;
+        .strength-container {
+            height: 4px;
+            background: #333;
+            margin: -15px 0 20px 0;
+            border-radius: 2px;
+            overflow: hidden;
         }
 
-        .icon {
+        #strengthBar {
+            height: 100%;
+            width: 0%;
+            transition: 0.4s ease;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #1ab188;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #159673;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 177, 136, 0.3);
+        }
+
+        .toggle-icon {
             position: absolute;
             right: 15px;
             top: 18px;
@@ -173,37 +131,93 @@
             cursor: pointer;
         }
 
-        .submit {
-            border: none;
-            outline: none;
-            background: #1ab188;
-            padding: 12px;
-            border-radius: 10px;
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
+        footer {
+    background-color: #0d1a1a; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 0 20px 0;
+    margin-top: 50px; 
+    width: 100%;
+    position: relative; 
+}
 
-        .submit:hover {
-            background: #1ec79a;
-            transform: translateY(-2px);
-        }
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
 
-        .signin {
-            color: #fff;
-            font-size: 14px;
-            text-align: center;
-            margin-top: 10px;
-        }
+.footer-section {
+    flex: 1;
+    min-width: 250px; 
+    margin-bottom: 30px;
+    text-align: left;
+}
 
-        .signin a {
-            color: #1ab188;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.footer-section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1ab188;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section a {
+    display: block; 
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+    transform: translateX(5px); 
+}
+
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #1ab188;
+    border-color: #1ab188;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: #666;
+}
+        #success-ui { display: none; text-align: center; animation: fadeIn 0.8s ease; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
@@ -214,7 +228,7 @@
             <img src="345news.png" alt="267News Logo">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: rgba(255,255,255,0.5);">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
         </button>
 
@@ -225,74 +239,139 @@
                 <li class="nav-item"><a class="nav-link" href="health.html">Health</a></li>
                 <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
                 <li class="nav-item">
-                    <a href="form.html" class="signup-btn">SIGN UP</a>
+                <a href="form.html" class="signup-btn">SIGN UP</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-  <div class="form-container">
+<div class="main-wrapper">
+    <div class="glass-card" id="form-card">
+        <h1 class="title">Join 267News</h1>
+        <p class="message">Empowering your voice across Botswana.</p>
 
-        <form autocomplete="off" class="form">
-
-            <p class="title">Register</p>
-
-            <p class="message">Join 267News for full access to Botswana's top stories.</p>
-
-            <div class="form-group">
-                <label>
-                    <input type="text" required="">
-                    <span>Firstname</span>
-                </label>
-                <label>
-                    <input type="text" required="">
-                    <span>Lastname</span>
-                </label>
+        <form id="registrationForm">
+            <div class="row g-2">
+                <div class="col-6 input-group-custom">
+                    <input type="text" placeholder="First Name" required>
+                </div>
+                <div class="col-6 input-group-custom">
+                    <input type="text" placeholder="Last Name" required>
+                </div>
             </div>
-            <label>
-                    <Input type="email" required="">
-                <span>Email</span>
-            </label>
-            <label>
-            <input type="password" id="password" required="">
-                <span>Password</span>
-            </label>
-            <label>
-                <input type="password" id="passwordConfirm" required="">
-                <span>Confirm password</span>
-                <span class="icon" id="togglePassword">
+
+            <div class="input-group-custom">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-group-custom">
+                <input type="password" id="pass" placeholder="Password" required>
+            </div>
+
+            <div class="strength-container">
+                <div id="strengthBar"></div>
+            </div>
+
+            <div class="input-group-custom">
+                <input type="password" id="confirmPass" placeholder="Confirm Password" required>
+                <span class="toggle-icon" id="toggleVisibility">
                     <i class="far fa-eye-slash"></i>
                 </span>
-            </label>
-            <button type="submit" class="submit">Create Account</button>
-            <p class="signin">
-                Already have an account? <a href="#">Sign In</a>
-            </p>
+            </div>
+
+            <button type="submit" class="submit-btn">Create Free Account</button>
+            <p class="message mt-4">Already a member? <a href="#" style="color: #1ab188;">Sign In</a></p>
         </form>
     </div>
 
-    <script>
+    <div class="glass-card" id="success-ui">
+        <div style="font-size: 60px; margin-bottom: 20px;">💎</div>
+        <h2 class="title">Welcome Aboard!</h2>
+        <p class="message">Your account is ready. Get ready for the latest real-time insights from Gaborone and beyond.</p>
+        <a href="index.html" class="submit-btn text-decoration-none d-inline-block">Go to Dashboard</a>
+    </div>
+</div>
 
-        const toggleBtn = document.querySelector('#togglePassword');
-        const passwordInput = document.querySelector('#passwordConfirm');
-        toggleBtn.addEventListener('click', () => {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
+<script>
+    const pass = document.getElementById('pass');
+    const confirmPass = document.getElementById('confirmPass');
+    const strengthBar = document.getElementById('strengthBar');
+    const toggle = document.getElementById('toggleVisibility');
+    const form = document.getElementById('registrationForm');
+    const formCard = document.getElementById('form-card');
+    const successUI = document.getElementById('success-ui');
 
-            toggleBtn.querySelector('i').classList.toggle('fa-eye');
+    pass.addEventListener('input', () => {
+        let score = 0;
+        if (pass.value.length > 7) score += 33;
+        if (/[A-Z]/.test(pass.value)) score += 33;
+        if (/[0-9]/.test(pass.value)) score += 34;
 
-            toggleBtn.querySelector('i').classList.toggle('fa-eye-slash');
-        });
+        strengthBar.style.width = score + "%";
+        if (score < 40) strengthBar.style.backgroundColor = "#ff4d4d";
+        else if (score < 80) strengthBar.style.backgroundColor = "#ffa500";
+        else strengthBar.style.backgroundColor = "#1ab188";
+    });
 
-    </script>
+    toggle.addEventListener('click', () => {
+        const type = pass.getAttribute('type') === 'password' ? 'text' : 'password';
+        pass.setAttribute('type', type);
+        confirmPass.setAttribute('type', type);
+        toggle.querySelector('i').classList.toggle('fa-eye');
+        toggle.querySelector('i').classList.toggle('fa-eye-slash');
+    });
 
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        if (pass.value !== confirmPass.value) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+ 
+        formCard.style.opacity = '0';
+        formCard.style.transform = 'translateY(-20px)';
+        
+        setTimeout(() => {
+            formCard.style.display = 'none';
+            successUI.style.display = 'block';
+        }, 500);
+    });
+    <footer class="sticky-footer">
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <p><strong>CONTACT US</strong></p>
+            <a href="mailto:267NEWS@gmail.com">267NEWS@gmail.com</a> | 
+            <a href="tel:+26771234567">📞 +267 71 234 567</a>
+        </div>
+
+        <div class="footer-section">
+            <p><strong>SOCIAL MEDIA</strong></p>
+            <div class="social-links">
+            <a href="https://facebook.com/267NewsBotswana" target="_blank">Facebook</a>
+            <a href="https://twitter.com/267NewsBotswana" target="_blank">Twitter</a>
+            <a href="https://instagram.com/267NewsBotswana" target="_blank">Instagram</a>
+            <a href="https://youtube.com/267NewsBotswana" target="_blank">Youtube</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <p>&copy; 2026 267NEWS Botswana</p>
+        </div>
+        <div class="footer-section">
+    <p>267News</p>
+    <a href="about-us.html">Our Story</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="form.html" class="signup-btn">SIGN UP</a>
+    <a href="form.html">Join the Community</a>
+</div>
+    </div>
+</footer>
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
 
-</html> 
-
-<<<<<<< HEAD
-<div class="form-container">
-=======
-<div class="form-container">
->>>>>>> 287cc37e478c3dd47e4410666d6377bd6965566e
