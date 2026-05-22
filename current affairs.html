@@ -128,46 +128,91 @@
         }
 
         hr { border: 0; height: 1px; background: #ccc; margin: 40px 0; }
+footer {
+    background-color: #0d1a1a; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 0 20px 0;
+    margin-top: 50px; 
+    width: 100%;
+    position: relative; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; 
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.footer-section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1ab188;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
 
-        .sticky-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #222;
-            color: white;
-            padding: 20px 0;
-            z-index: 1000;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
-        }
+.footer-section a {
+    display: block; 
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.footer-section a:hover {
+    color: #ffffff;
+    transform: translateX(5px); 
+}
 
-        .footer-section { text-align: center; margin: 5px 10px; }
 
-        .footer-section p {
-            margin-bottom: 5px;
-            font-size: 0.9rem;
-            color: #feacbc; 
-        }
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
 
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.85rem;
-            margin: 0 8px;
-        }
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    transition: 0.3s;
+}
 
-        .footer-section a:hover { color: #feacbc; }
+.social-links a:hover {
+    background-color: #1ab188;
+    border-color: #1ab188;
+    color: white;
+    transform: translateY(-3px);
+}
 
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: #666;
+}
     </style>
 </head>
 <body>
@@ -204,16 +249,28 @@
             <img src="racr.jfif" alt="Botswana relay team winning">
             <div class="meta-data">
                 <p><strong>Published:</strong> MARCH 9, 2026</p>
-                <p><strong>By:</strong> Maatla Francis</p>
+                <p><strong>By:</strong>Kgosi Buti</p>
             </div>
-            <p>>GABORONE - In a historic moment for African athletics, Botswana's men's 4x400m relay team clinched
-                   gold yesterday at the Debswana World Athletics Relays Gaborone 26. Running in front of a sold-out
-                   home crowd, the team—anchored by world champion Collen Kebinatshipi and featuring Olympic icon
-                   Letsile Tebogo—clocked a staggering 2:54.47. The time is not only a national record but the
-                   third-fastest performance in world history, smashing the championship record by nearly three
-                   seconds. "It was not about the medals," Tebogo told reporters post-race, "it was about how this 
-                   crowd held us together." The event marks a successful debut for Botswana as a host of the World
-                   Athletics Series, cementing the nation's status as a global sprinting powerhouse. </p>
+            <p>GABORONE — The National Stadium in Gaborone dissolved into absolute pandemonium as host nation Botswana brought a spectacular
+                close to the 2026 World Athletics Relays, storming to gold in the men's 4x400m final.The stadium, packed to the rafters with
+                an ecstatic home crowd clad in a sea of light blue, black, and white, erupted into deafening cheers as the local quartet not 
+                only took the crown but shattered the championship record with a blistering time of 2:54.47. The mark stands as the third-fastest 
+                4x400m performance in athletics history.<br>Turning Home Support into History
+As the first-ever World Athletics Series event to be held on African soil, the pressure on the local favorites was immense. Running the final event of the entire weekend program, Team Botswana delivered a masterclass in pacing, nerve, and raw power.
+
+The race unfolded as a thrilling, edge-of-your-seat battle:
+<ul class="highlights">
+                    <li><strong>The Start:</strong>Lee Eppie ignited the home crowd by blasting through a 44.26 opening leg to secure an early lead</li>
+                    
+                    <li><strong>The Surge:</strong>He handed off to Olympic 200m champion Letsile Tebogo, who clocking a blazing 43.50 split. However, 
+                                                   the stadium gasped as South Africa's Lythe Pillay produced a historic 42.66 split—the fastest singl relay leg
+                                                    ever recorded in history—to temporarily pull South Africa ahead</li>
+                    <li><strong>The Chase:</strong>Bayapo Ndori fought valiantly on the third leg, refusing to let the gap widen as Australia also closed in</li>
+                    <li><strong>The Finish</strong>Heading into the final anchor leg, three nations were neck-and-neck. Botswana's reigning world 400m champion,
+                                                   Collen Kebinatshipi, ran shoulder-to-shoulder with South Africa's Zakithi Nene and Australia's Aidan Murphy. 
+                                                   Breaking free as they hit the home straight, Kebinatshipi charged through the finish line to secure gold, 
+                                                   sending the home crowd into a state of pure delirium.</li>
+                </ul> </p>
         </article>
 
         <article>
@@ -223,16 +280,27 @@
                 <p><strong>Published:</strong> APRIL 22, 2026</p>
                 <p><strong>By:</strong> Maatla Francis</p>
             </div>
-            <p>FINANCE - The Bank of Botswana (BoB) has stunned markets by raising the benchmark lending rate from<br>
-                   3.5% to 5.5%. Governor Lesego Moseki announced the decision following an emergency Monetary Policy<br>
-                   Committee meeting, citing a "severe energy shock" triggered by ongoing geopolitical conflicts in the<br>
-                   Middle East.
-
-                   The hike is a preemptive strike against soaring inflation, which is projected to average 8.7% in 2026.<br>
-                   This move makes Botswana the first African nation to aggressively tighten its monetary policy in response<br>
-                   to the current global oil disruption. The central bank warned that while the move is necessary to stabilize<br>
-                   the Pula, it will likely dampen consumer spending and increase the cost of credit for local businesses through<br>
-                   the remainder of the year</p>
+            <p>GABORONE — In an unexpected move that defies the broader holding trend across African financial markets,
+                 the Bank of Botswana has delivered an aggressive 200-basis-point increase to its benchmark interest rate.
+                 The Monetary Policy Committee (MPC) announced it is raising the Monetary Policy Rate (MoPR) from 3.5% to 5.5%. 
+                 The massive hike pushes the country's borrowing costs to their highest level since 2017. <br>Bracing for an Inflation SpikeThe 
+                 central bank's drastic intervention comes as policymakers warn of an imminent surge in consumer prices. While headline inflation
+                  sat at a relatively modest 4.2% in March—safely within the bank's 3-6% objective range—new internal forecasts indicate that the
+                   gauge is set to aggressively breach the upper limit.  According to Central Bank Governor Lesego Caster Moseki, the looming inflation
+                    spike is driven by a cluster of recent domestic cost increases, including the March hike in fuel prices, higher public transport fares, 
+                    and rising medical aid premiums. The bank now expects inflation to average a steep 8.7% across 2026 before cooling down to 5.6% next year. 
+                    "External developments, particularly disruptions associated with the war in the Middle East, continue to affect commodity markets and inflation
+                     expectations," Governor Moseki stated. "These developments have increased the cost of living in Botswana and may undermine the recovery of the 
+                     global diamond market."  Re-calibrating the SystemCentral bank officials clarified that the 200-basis-point adjustment is not a traditional "monetary
+                      tightening" cycle meant to slow down a runaway economy. Instead, it is a technical recalibration designed to stabilize market liquidity and strengthen
+                       policy transmission—essentially ensuring that the central bank's rate changes actually loop effectively through commercial banks.  Critically, the central 
+                       bank has directed commercial banks not to increase their Prime Lending Rates (PLRs) in response to this move. The bank expressed explicit concern that commercial 
+                       entities have been widening their lending margins above the prime rate, a practice the regulator warns undermines national policy intentions and squeezes local borrowers. 
+                        Standing Out in the RegionWith this decision, Botswana joins a very small group of developing economies aggressively raising rates. Across most of the continent—including 
+                        neighboring South Africa—central banks have largely entered a holding pattern, pausing rate hikes as they navigate global economic volatility.The aggressive rate hike lands at a
+                         complex time for the local economy. Following a 0.7% contraction in 2025 due to a severely depressed diamond export market, the Ministry of Finance is projecting a modest GDP
+                          recovery of 3.1% this year, heavily reliant on non-mining sector growth.  By taking the front foot against inflation now, the Bank of Botswana is betting that short-term market 
+                          stabilization will shield the economy from far more damaging, long-term price shocks.  </p>
         </article>
 
         <article>
@@ -240,7 +308,7 @@
             <img src="president.jfif" alt="Presidential State Visit">
             <div class="meta-data">
                 <p><strong>Published:</strong> APRIL 20, 2026</p>
-                <p><strong>By:</strong> Maatla Francis</p>
+                <p><strong>By:</strong>Gomolemo Dikalaiso</p>
             </div>
             <p>DIPLOMACY - President Duma Gideon Boko is hosting Rwandan President Paul Kagame today for a high-stakes state<br>
                    visit aimed at diversifying Botswana's economy. The visit follows the conclusion of the Botswana-Rwanda Joint<br>
@@ -254,25 +322,36 @@
         </article>
 
     </main>
-    <footer class="sticky-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <p><strong>CONTACT US</strong></p>
-                <a href="mailto:267NEWS@gmail.com">267NEWS@gmail.com</a> | 
-                <a href="tel:+26771234567">📞 +267 71 234 567</a>
-            </div>
-            <div class="footer-section">
-                <p><strong>SOCIAL MEDIA</strong></p>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">X</a>
-            </div>
-            <div class="footer-section">
-                <p>&copy; 2026 267NEWS Botswana</p>
+   <footer class="sticky-footer">
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <p><strong>CONTACT US</strong></p>
+            <a href="mailto:267NEWS@gmail.com">267NEWS@gmail.com</a> | 
+            <a href="tel:+26771234567">📞 +267 71 234 567</a>
+        </div>
+
+        <div class="footer-section">
+            <p><strong>SOCIAL MEDIA</strong></p>
+            <div class="social-links">
+            <a href="https://facebook.com/267NewsBotswana" target="_blank">Facebook</a>
+            <a href="https://twitter.com/267NewsBotswana" target="_blank">Twitter</a>
+            <a href="https://instagram.com/267NewsBotswana" target="_blank">Instagram</a>
+            <a href="https://youtube.com/267NewsBotswana" target="_blank">Youtube</a>
             </div>
         </div>
-    </footer>
-
+        <div class="footer-section">
+            <p>&copy; 2026 267NEWS Botswana</p>
+        </div>
+        <div class="footer-section">
+    <p>267News</p>
+    <a href="about-us.html">Our Story</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="form.html" class="signup-btn">SIGN UP</a>
+    <a href="form.html">Join the Community</a>
+</div>
+    </div>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
